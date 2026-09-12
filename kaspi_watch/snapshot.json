@@ -1,0 +1,1895 @@
+{
+  "goods/q3216": {
+    "section": "goods",
+    "qid": "q3216",
+    "order": 1001,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/goods/q3216",
+    "title": "Как с помощью API в Магазине на Kaspi.kz узнать код категории для добавления товара?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите названия категорий и их коды для API-запросов."
+    ],
+    "tables": [
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "code",
+          "Код категории для API-запроса"
+        ],
+        [
+          "title",
+          "Название категории в Магазине на Kaspi.kz"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "GET /shop/api/products/classification/categories HTTP/1.1\nHost: kaspi.kz\nAccept: application/json\nX-Auth-Token: token"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "[\n{\n\"code\": \"Master - Exercise notebooks\",\n\"title\": \"Тетради\"\n},\n{\n\"code\": \"Master - Head units\",\n\"title\": \"Автомагнитолы\"\n},\n{\n\"code\": \"Master - Car alarms\",\n\"title\": \"Автосигнализации\"\n},\n{\n\"code\": \"Master - Blenders\",\n\"title\": \"Блендеры\"\n},\n{\n\"code\": \"Master - Cooktops\",\n\"title\": \"Варочные поверхности\"\n},\n{\n\"code\": \"Master - Video cameras\",\n\"title\": \"Видеокамеры\"\n},\n{\n\"code\": \"Master - Videocards\",\n\"title\": \"Видеокарты\"\n},\n{\n\"code\": \"Master - DVRs\",\n\"title\": \"Видеорегистраторы\"\n}\n]"
+      }
+    ]
+  },
+  "goods/q3217": {
+    "section": "goods",
+    "qid": "q3217",
+    "order": 1002,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/goods/q3217",
+    "title": "Как с помощью API в Магазине на Kaspi.kz узнать список характеристик товара?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите список атрибутов для каждой характеристики. Если вы передадите в них данные о товаре, они будут отображаться в его карточке в Магазине на Kaspi.kz."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "c",
+          "Код категории\nЧтобы его получить:\n• с помощью API в Магазине на Kaspi.kz получите список характеристик категорий;\n• скопируйте значение атрибута «code»."
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "code",
+          "Код характеристики"
+        ],
+        [
+          "type",
+          "Тип переменной, которую можно использовать для описания"
+        ],
+        [
+          "",
+          "boolean\nenum\nstring\nnumber",
+          "только «true» или «false»\nзначение из списка\nтекст\nчисло"
+        ],
+        [
+          "multiValued",
+          "Можно указать несколько значений в характеристике"
+        ],
+        [
+          "",
+          "true\nfalse",
+          "да\nнет"
+        ],
+        [
+          "mandatory",
+          "Обязательно заполнять характеристику"
+        ],
+        [
+          "",
+          "true\nfalse",
+          "да\nнет"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "GET\nhttps://kaspi.kz/shop/api/products/classification/attributes?c=Master - Exercise notebooks&HTTP/1.1=&Host= kaspi.kz\nAccept: application/json\nX-Auth-Token: token"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "[\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*type\",\n\"type\": \"enum\",\n\"multiValued\": false,\n\"mandatory\": true\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*format\",\n\"type\": \"enum\",\n\"multiValued\": true,\n\"mandatory\": true\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*orientation\",\n\"type\": \"enum\",\n\"multiValued\": false,\n\"mandatory\": false\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*ruling\",\n\"type\": \"enum\",\n\"multiValued\": false,\n\"mandatory\": true\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*fields\",\n\"type\": \"boolean\",\n\"multiValued\": false,\n\"mandatory\": true\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*number of sheets\",\n\"type\": \"number\",\n\"multiValued\": false,\n\"mandatory\": true\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*number of notebooks\",\n\"type\": \"number\",\n\"multiValued\": false,\n\"mandatory\": true\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*paper whiteness\",\n\"type\": \"number\",\n\"multiValued\": false,\n\"mandatory\": false\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*framing\",\n\"type\": \"enum\",\n\"multiValued\": true,\n\"mandatory\": true\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*paper\",\n\"type\": \"enum\",\n\"multiValued\": true,\n\"mandatory\": false\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*base weight\",\n\"type\": \"number\",\n\"multiValued\": false,\n\"mandatory\": false\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*cover\",\n\"type\": \"enum\",\n\"multiValued\": false,\n\"mandatory\": true\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*decor\",\n\"type\": \"enum\",\n\"multiValued\": true,\n\"mandatory\": false\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*design\",\n\"type\": \"enum\",\n\"multiValued\": true,\n\"mandatory\": false\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*color\",\n\"type\": \"enum\",\n\"multiValued\": true,\n\"mandatory\": true\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*length\",\n\"type\": \"number\",\n\"multiValued\": false,\n\"mandatory\": false\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*width\",\n\"type\": \"number\",\n\"multiValued\": false,\n\"mandatory\": false\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*weight\",\n\"type\": \"number\",\n\"multiValued\": false,\n\"mandatory\": false\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*features\",\n\"type\": \"enum\",\n\"multiValued\": true,\n\"mandatory\": false\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*components\",\n\"type\": \"string\",\n\"multiValued\": false,\n\"mandatory\": false\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*additional\",\n\"type\": \"string\",\n\"multiValued\": false,\n\"mandatory\": false\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*notice\",\n\"type\": \"string\",\n\"multiValued\": false,\n\"mandatory\": true\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*range\",\n\"type\": \"enum\",\n\"multiValued\": false,\n\"mandatory\": true\n}\n]"
+      }
+    ]
+  },
+  "goods/q3218": {
+    "section": "goods",
+    "qid": "q3218",
+    "order": 1006,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/goods/q3218",
+    "title": "Как с помощью API в Магазине на Kaspi.kz получить возможные значения для характеристик товара?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите рекомендацию, какую информацию добавить в характеристику."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "c",
+          "Код категории товара\nЧтобы его получить:\n• с помощью API в Магазине на Kaspi.kz получите список категорий;\n• скопируйте значение атрибута «code»."
+        ],
+        [
+          "a",
+          "Код характеристики\nЧтобы его получить:\n• с помощью API в Магазине на Kaspi.kz получите список характеристик для категории;\n• скопируйте значение атрибута «code»."
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "code",
+          "Код значения"
+        ],
+        [
+          "name",
+          "Название"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "GET\nhttps://kaspi.kz/shop/api/products/classification/attribute/values?c=Master - Exercise notebooks&HTTP/1.1=&Host= kaspi.kz&a=Exercise notebooks*Obsie harakteristiki.exercise notebooks*cover\nAccept: application/json\nX-Auth-Token: token"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "[\n{\n\"code\": \"мягкая\",\n\"name\": \"мягкая\"\n},\n{\n\"code\": \"твердая\",\n\"name\": \"твердая\"\n}\n]"
+      }
+    ]
+  },
+  "goods/q3219": {
+    "section": "goods",
+    "qid": "q3219",
+    "order": 1003,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/goods/q3219",
+    "title": "Как с помощью API добавить товар для продажи в Магазине на Kaspi.kz?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите уникальный код загрузки товара и результат его добавления в Магазин на Kaspi.kz."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "sku",
+          "Артикул товара"
+        ],
+        [
+          "title",
+          "Название товара"
+        ],
+        [
+          "brand",
+          "Бренд"
+        ],
+        [
+          "category",
+          "Код категории\nЧтобы его получить:\n• с помощью API в Магазине на Kaspi.kz получите список категорий;\n• скопируйте значение атрибута «code»."
+        ],
+        [
+          "description",
+          "Описание от продавца"
+        ],
+        [
+          "images",
+          "Фотографии товара\nУкажите ссылку на изображение в ключе «url»"
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "code",
+          "Код характеристики товара\nЧтобы его получить:\n• с помощью API в Магазине на Kaspi.kz получите список характеристик для категории;\n• скопируйте значение атрибута «code»."
+        ],
+        [
+          "value",
+          "Значение характеристики"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "POST /shop/api/products/import HTTP/1.1\nHost: kaspi.kz\nAccept: application/json\nX-Auth-Token: token\nContent-Type: text/plain\n//body\n[\n{\n\"sku\": \"Testsku»,\n\"title\": \"test notebook\",\n\"brand\": \"test\",\n\"category\": \"Master - Exercise notebooks\",\n\"description\": \"Some description\",\n\"attributes\": [\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*type\",\n\"value\": \"тетрадь-блокнот\"\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*format\",\n\"value\": \"А5\"\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*orientation\",\n\"value\": \"вертикальная\"\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*ruling\",\n\"value\": \"крупная клетка\"\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*fields\",\n\"value\": true\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*number of sheets\",\n\"value\": 48\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*number of notebooks\",\n\"value\": 2\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*framing\",\n\"value\": \"резинка\"\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*paper\",\n\"value\": \"офсетная\"\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*cover\",\n\"value\": \"мягкая\"\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*color\",\n\"value\": \"желтый\"\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*notice\",\n\"value\": \"тестест\"\n},\n{\n\"code\": \"Exercise notebooks*Obsie harakteristiki.exercise notebooks*range\",\n\"value\": \"расцветка в зависимости от наличия на складе\"\n}\n],\n\"images\": [\n{\n\"url\": \"https://resources.cdn-kaspi.kz/img/m/p/h44/h88/63854412398622.jpg\"\n}\n]\n}\n]"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"code\": \"testproduct\",\n\"status\": \"UPLOADED\"\n}"
+      }
+    ]
+  },
+  "goods/q3221": {
+    "section": "goods",
+    "qid": "q3221",
+    "order": 1005,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/goods/q3221",
+    "title": "Как с помощью API узнать, что товар добавлен для продажи в Магазине на Kaspi.kz?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите информацию о статусе обработки."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "i",
+          "Код загрузки товара\nЧтобы его получить:\n• с помощью API в Магазине на Kaspi.kz добавьте товар для продажи;\n• скопируйте значение атрибута «code»."
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "code",
+          "Код загрузки товара"
+        ],
+        [
+          "status",
+          "Статус обработки"
+        ],
+        [
+          "description",
+          "Описание от продавца"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "GET\nhttps://kaspi.kz/shop/api/products/import?i=testproduct&HTTP/1.1=&Host=kaspi.kz\nAccept: application/json\nX-Auth-Token: token"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"code\": \"testproduct \",\n\"status\": \"FINISHED\"\n}"
+      }
+    ]
+  },
+  "goods/q3222": {
+    "section": "goods",
+    "qid": "q3222",
+    "order": 1004,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/goods/q3222",
+    "title": "Я с помощью API добавил товары для продажи в Магазине на Kaspi.kz. Как узнать результат?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите детальный результат проверки товара."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "i",
+          "Код загрузки товара"
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "errors",
+          "Количество товаров с ошибкой"
+        ],
+        [
+          "warnings",
+          "Количество товаров с предупреждением"
+        ],
+        [
+          "skipped",
+          "Количество товаров с пропуском"
+        ],
+        [
+          "total",
+          "Количество загруженных товаров"
+        ],
+        [
+          "state",
+          "Результат загрузки"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "GET\nhttps://kaspi.kz/shop/api/products/import/result?i=testproduct&HTTP/1.1=&Host=kaspi.kz\nAccept: application/json\nX-Auth-Token: token"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"errors\": 0,\n\"warnings\": 0,\n\"skipped\": 0,\n\"total\": 1,\n\"result\": {\n\" Testsku\": {\n\"state\": \"FINISHED\"\n}\n}\n}"
+      }
+    ]
+  },
+  "goods/q3223": {
+    "section": "goods",
+    "qid": "q3223",
+    "order": 1000,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/goods/q3223",
+    "title": "Я хочу с помощью API добавить новые товары на продажу в Магазине на Kaspi.kz. Как получить схему JSON?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите параметры, которые можно использовать при работе с API в Магазине на Kaspi.kz, и описание данных для них."
+    ],
+    "tables": null,
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "GET\nhttps://kaspi.kz/shop/api/products/import/schema?HTTP/1.1=&Host= kaspi.kz\nAccept: application/json\nX-Auth-Token: token"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"$schema\": \"http://json-schema.org/draft-04/schema#\",\n\"title\": \"Product attributes import scheme\",\n\"description\": \"Used to validate JSON documents with product attribute values and images.\",\n\"type\": \"array\",\n\"minItems\": 1,\n\"maxItems\": 10000,\n\"items\": {\n\"title\": \"Array of products\",\n\"description\": \"Contains individual products with their attributes and images.\",\n\"type\": \"object\",\n\"properties\": {\n\"sku\": {\n\"title\": \"SKU\",\n\"description\": \"Unique identifier used to find products in catalog.\",\n\"type\": \"string\",\n\"maxLength\": 64,\n\"minLength\": 1,\n\"example\": \"00167PVS\"\n},\n\"title\": {\n\"title\": \"Product title\",\n\"description\": \"Contains product title that would be shown on storefront, without category prefix (eg. Smartphone, Fridge etc.).\",\n\"type\": \"string\",\n\"maxLength\": 1024,\n\"minLength\": 1,\n\"example\": \"Sony Alpha A6100 Kit 16-50 мм OSS черный\"\n},\n\"brand\": {\n\"title\": \"Product brand\",\n\"description\": \"Contains product brand name that would be used in 'Brand' facet on product listing pages of storefront.\",\n\"type\": \"string\",\n\"maxLength\": 256,\n\"minLength\": 1,\n\"example\": \"Sony\"\n},\n\"category\": {\n\"title\": \"Category code\",\n\"description\": \"This code would be used to assign the product to a category. It also defines the scope of available attributes. Only leaf categories are accepted\",\n\"type\": \"string\",\n\"maxLength\": 512,\n\"minLength\": 1,\n\"example\": \"Master - Photo cameras\",\n\"pattern\": \"^Master ?-[a-zA-Z_\\\\s\\\\d-]+$\"\n},\n\"description\": {\n\"title\": \"Short product definition\",\n\"description\": \"Contains small product definition used on item page. Usually defaults to some major specs.\",\n\"type\": \"string\",\n\"maxLength\": 1024,\n\"minLength\": 1,\n\"example\": \"- тип: беззеркальная со сменной оптикой\\n- число эффективных пикселов: 24 Мпикс\\n- объектив в комплекте: да\\n- диагональ жк-экрана: 3 дюйм\\n- ручная настройка выдержки и диафрагмы: да\"\n},\n\"weight\": {\n\"title\": \"Product's weight (optional)\",\n\"description\": \"Contains double value, but type is string\",\n\"type\": \"string\",\n\"maxLength\": 256,\n\"minLength\": 1\n},\n\"attributes\": {\n\"title\": \"List of attributes\",\n\"description\": \"Array of attributes available for the assigned category.\",\n\"type\": \"array\",\n\"minItems\": 1,\n\"maxItems\": 256,\n\"items\": {\n\"title\": \"Individual attribute\",\n\"description\": \"Contains data for individual attribute.\",\n\"type\": \"object\",\n\"properties\": {\n\"code\": {\n\"title\": \"Attribute code\",\n\"description\": \"Identifies attribute within category. Unique inside category.\",\n\"type\": \"string\",\n\"maxLength\": 256,\n\"minLength\": 1,\n\"example\": \"Photo cameras*Camera matrix.photo cameras*type\",\n\"pattern\": \"^([a-zA-Z_\\\\s\\\\d&.\\\\-#%\\/,]+\\\\*)+[a-zA-Z_\\\\s\\\\d&.\\\\-#%\\/,]+$\"\n},\n\"value\": {\n\"title\": \"Attribute value\",\n\"description\": \"Array could be used for multivalued attributes only.\",\n\"example\": [\n\"[\\\"зеркальный фотоаппарат (TTL)\\\", \\\"фотоаппарат с оптическим видоискателем\\\"]\",\n\"\\\"6000x4000\\\"\",\n\"24\"\n],\n\"oneOf\": [\n{\n\"type\": \"array\",\n\"minItems\": 1,\n\"maxItems\": 32,\n\"uniqueItems\": true,\n\"items\": {\n\"type\": \"string\",\n\"maxLength\": 256,\n\"minLength\": 1\n}\n},\n{\n\"type\": \"string\",\n\"maxLength\": 256,\n\"minLength\": 1\n},\n{\n\"type\": \"number\"\n},\n{\n\"type\": \"boolean\"\n}\n]\n}\n},\n\"required\": [\n\"code\",\n\"value\"\n],\n\"additionalProperties\": false\n}\n},\n\"images\": {\n\"title\": \"Product images\",\n\"description\": \"Must contain at least one valid image url. Valid means downloadable and having valid picture as content. Redirects are supported.\",\n\"type\": \"array\",\n\"minItems\": 1,\n\"uniqueItems\": true,\n\"items\": {\n\"type\": \"object\",\n\"properties\": {\n\"url\": {\n\"title\": \"Image url\",\n\"description\": \"Individual image url.\",\n\"type\": \"string\",\n\"maxLength\": 1024,\n\"minLength\": 1,\n\"format\": \"uri\",\n\"pattern\": \"^https?://\",\n\"example\": \"https://cdn-kaspi.kz/shop/medias/sys_master/images/images/h5d/h37/16008607399966/sony-alpha-a6600-kit-16-50mm-cernyj-100692376-1.jpg\"\n}\n},\n\"required\": [\n\"url\"\n],\n\"additionalProperties\": false\n}\n}\n},\n\"required\": [\n\"sku\",\n\"title\",\n\"brand\",\n\"category\",\n\"attributes\",\n\"images\"\n],\n\"additionalProperties\": false\n}\n}"
+      }
+    ]
+  },
+  "goods/q4817": {
+    "section": "goods",
+    "qid": "q4817",
+    "order": 1007,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/goods/q4817",
+    "title": "Я могу с помощью API объединить разные размеры или цвета товара из категории «Одежда» и «Обувь» в одной карточке?",
+    "updated": "20.03.2026",
+    "text": [
+      "Да. Есть несколько способов сделать это:",
+      "Manufacturer code",
+      "• Укажите одинаковый Manufacturer code у всех товаров одной и той же модели;",
+      "• Поле «familyId» оставьте пустым.",
+      "При последующих загрузках с тем же manufacturer code новые размеры или цвета будут добавлены в ранее созданные карточки.",
+      "FamilyId",
+      "Можете использовать, если артикулы производителя — manufacturer code различаются у одной модели в зависимости от размера или цвета.",
+      "Укажите любое одинаковое сочетание букв и цифр в поле «familyId» для всех товаров одной модели до attributes и после description. Например: AA123, bcd, 789.",
+      "Обратите внимание: способ работает только в рамках одной загрузки."
+    ],
+    "tables": null,
+    "examples": [
+      {
+        "title": "Пример запроса",
+        "text": "POST /shop/api/products/import HTTP/1.1\nHost: kaspi.kz\nAccept: application/json\nX-Auth-Token: token\nContent-Type: text/plain\n//body\n[\n{\n\"sku\": \"Testsku\",\n\"title\": \"test\",\n\"brand\": \"brand\",\n\"category\": \"Master - Girl knee boots\",\n\"description\": \"Some description\",\n\"attributes\": [\n{\n\"code\": \"Shoes*Model\",\n\"value\": \"валенки\"\n},\n{\n\"code\": \"Shoes*Gender\",\n\"value\": \"для девочек\"\n},\n{\n\"code\": \"Shoes*Material\",\n\"value\": \"войлок\"\n},\n{\n\"code\": \"Shoes*Lining material\",\n\"value\": \"шерстяной мех\"\n},\n{\n\"code\": \"Shoes*Sole material\",\n\"value\": \"полиуретан\"\n},\n{\n\"code\": \"Shoes*Shoes sole\",\n\"value\": \"анатомическая\"\n},\n{\n\"code\": \"Shoes*Season\",\n\"value\": \"зима\"\n},\n{\n\"code\": \"Shoes*Country\",\n\"value\": \"Россия\"\n},\n{\n\"code\": \"Shoes*Style\",\n\"value\": \"повседневный\"\n},\n{\n\"code\": \"Shoes*Clasp\",\n\"value\": \"липучка\"\n},\n{\n\"code\": \"Shoes*Platform\",\n\"value\": false\n},\n{\n\"code\": \"Shoes*Manufacturer code\",\n\"value\": \"abcd123\"\n},\n{\n\"code\": \"Shoes*Size features\",\n\"value\": \"размер в размер\"\n},\n{\n\"code\": \"Shoes*Collection1\",\n\"value\": \"Осень-Зима 2025\"\n},\n{\n\"code\": \"Shoes*Colour\",\n\"value\": \"бежевый\"\n},\n{\n\"code\": \"Shoes*Size\",\n\"value\": \"25\"\n},\n{\n\"code\": \"Shoes*Manufacturer size\",\n\"value\": \"25\"\n}\n],\n\"images\": [\n{\n\"url\": \"https://resources.cdn-kaspi.kz/img/m/p/h44/h88/63854412398622.jpg\"\n}\n]\n},\n{\n\"sku\": \"Testsku2\",\n\"title\": \"test\",\n\"brand\": \"brand\",\n\"category\": \"Master - Girl knee boots\",\n\"description\": \"Some description\",\n\"attributes\": [\n{\n\"code\": \"Shoes*Model\",\n\"value\": \"валенки\"\n},\n{\n\"code\": \"Shoes*Gender\",\n\"value\": \"для девочек\"\n},\n{\n\"code\": \"Shoes*Material\",\n\"value\": \"войлок\"\n},\n{\n\"code\": \"Shoes*Lining material\",\n\"value\": \"шерстяной мех\"\n},\n{\n\"code\": \"Shoes*Sole material\",\n\"value\": \"полиуретан\"\n},\n{\n\"code\": \"Shoes*Shoes sole\",\n\"value\": \"анатомическая\"\n},\n{\n\"code\": \"Shoes*Season\",\n\"value\": \"зима\"\n},\n{\n\"code\": \"Shoes*Country\",\n\"value\": \"Россия\"\n},\n{\n\"code\": \"Shoes*Style\",\n\"value\": \"повседневный\"\n},\n{\n\"code\": \"Shoes*Clasp\",\n\"value\": \"липучка\"\n},\n{\n\"code\": \"Shoes*Platform\",\n\"value\": false\n},\n{\n\"code\": \"Shoes*Manufacturer code\",\n\"value\": \"abcd123\"\n},\n{\n\"code\": \"Shoes*Size features\",\n\"value\": \"размер в размер\"\n},\n{\n\"code\": \"Shoes*Collection1\",\n\"value\": \"Осень-Зима 2025\"\n},\n{\n\"code\": \"Shoes*Colour\",\n\"value\": \"бежевый\"\n},\n{\n\"code\": \"Shoes*Size\",\n\"value\": \"26\"\n},\n{\n\"code\": \"Shoes*Manufacturer size\",\n\"value\": \"26\"\n}\n],\n\"images\": [\n{\n\"url\": \"https://resources.cdn-kaspi.kz/img/m/p/h44/h88/63854412398622.jpg\"\n}\n]\n}\n]"
+      },
+      {
+        "title": "Пример ответа",
+        "text": "{\n\"code\": \"testproduct\",\n\"status\": \"UPLOADED\"\n}"
+      },
+      {
+        "title": "Пример запроса",
+        "text": "POST /shop/api/products/import HTTP/1.1\nHost: kaspi.kz\nAccept: application/json\nX-Auth-Token: token\nContent-Type: text/plain\n//body\n[\n{\n\"sku\": \"Testsku\",\n\"title\": \"test\",\n\"brand\": \"brand\",\n\"category\": \"Master - Girl swimsuits\",\n\"description\": \"Some description\",\n\"familyId\": \"AA123\",\n\"attributes\": [\n{\n\"code\": \"Girl swimsuits*Type\",\n\"value\": \"раздельный купальник\"\n},\n{\n\"code\": \"Girl swimsuits*Purpose\",\n\"value\": \"пляжный\"\n},\n{\n\"code\": \"Girl swimsuits*Manufacturer size\",\n\"value\": \"104\"\n},\n{\n\"code\": \"Girl swimsuits*Bra straps\",\n\"value\": \"нерегулируемые\"\n},\n{\n\"code\": \"Girl swimsuits*Cups\",\n\"value\": \"без подклада\"\n},\n{\n\"code\": \"Girl swimsuits*Clasp\",\n\"value\": \"без застежки\"\n},\n{\n\"code\": \"Girl swimsuits*Collection\",\n\"value\": \"Весна-Лето 2025\"\n},\n{\n\"code\": \"Girl swimsuits*Fabric\",\n\"value\": \"полиэстер\"\n},\n{\n\"code\": \"Girl swimsuits*Ornament\",\n\"value\": \"однотонный\"\n},\n{\n\"code\": \"Girl swimsuits*Notice1\",\n\"value\": \"товар обмену и возврату не подлежит\"\n},\n{\n\"code\": \"Clothes*Size\",\n\"value\": \"104\"\n},\n{\n\"code\": \"Clothes*Colour\",\n\"value\": \"розовый\"\n},\n{\n\"code\": \"Clothes*Manufacturer code\",\n\"value\": \"Manufacturer code\"\n},\n{\n\"code\": \"Clothes*Collection\",\n\"value\": \"Весна-Лето 2025\"\n}\n],\n\"images\": [\n{\n\"url\": \"https://resources.cdn-kaspi.kz/img/m/p/h44/h88/63854412398622.jpg\"\n}\n]\n},\n{\n\"sku\": \"Testsku2\",\n\"title\": \"test\",\n\"brand\": \"brand\",\n\"category\": \"Master - Girl swimsuits\",\n\"description\": \"Some description\",\n\"familyId\": \"AA123\",\n\"attributes\": [\n{\n\"code\": \"Girl swimsuits*Type\",\n\"value\": \"раздельный купальник\"\n},\n{\n\"code\": \"Girl swimsuits*Purpose\",\n\"value\": \"пляжный\"\n},\n{\n\"code\": \"Girl swimsuits*Manufacturer size\",\n\"value\": \"128\"\n},\n{\n\"code\": \"Girl swimsuits*Bra straps\",\n\"value\": \"нерегулируемые\"\n},\n{\n\"code\": \"Girl swimsuits*Cups\",\n\"value\": \"без подклада\"\n},\n{\n\"code\": \"Girl swimsuits*Clasp\",\n\"value\": \"без застежки\"\n},\n{\n\"code\": \"Girl swimsuits*Collection\",\n\"value\": \"Весна-Лето 2025\"\n},\n{\n\"code\": \"Girl swimsuits*Fabric\",\n\"value\": \"полиэстер\"\n},\n{\n\"code\": \"Girl swimsuits*Ornament\",\n\"value\": \"однотонный\"\n},\n{\n\"code\": \"Girl swimsuits*Notice1\",\n\"value\": \"товар обмену и возврату не подлежит\"\n},\n{\n\"code\": \"Clothes*Size\",\n\"value\": \"128\"\n},\n{\n\"code\": \"Clothes*Colour\",\n\"value\": \"розовый\"\n},\n{\n\"code\": \"Clothes*Manufacturer code\",\n\"value\": \"Manufacturer code\"\n},\n{\n\"code\": \"Clothes*Collection\",\n\"value\": \"Весна-Лето 2025\"\n}\n],\n\"images\": [\n{\n\"url\": \"https://resources.cdn-kaspi.kz/img/m/p/h44/h88/63854412398622.jpg\"\n}\n]\n}\n]"
+      },
+      {
+        "title": "Пример ответа",
+        "text": "{\n\"code\": \"testproduct\",\n\"status\": \"UPLOADED\"\n}"
+      }
+    ]
+  },
+  "goods/q5185": {
+    "section": "goods",
+    "qid": "q5185",
+    "order": 1008,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/goods/q5185",
+    "title": "Как с помощью API добавить штрихкод товара в Магазине на Kaspi.kz?",
+    "updated": "24.07.2026",
+    "text": [
+      "Отправьте API-запрос с помощью любого сервиса, например: Postman, Insomnia, Paw, Swagger, SoapUI — или настройте интеграцию с вашей системой учета."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "masterSku",
+          "код товара в Магазине на Kaspi.kz"
+        ],
+        [
+          "barcode",
+          "штрихкод (8-14 символов)"
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "status",
+          "статус"
+        ],
+        [
+          "OK",
+          "успешная привязка"
+        ],
+        [
+          "ALREADY_ADDED",
+          "штрихкод уже добавлен к этому товару"
+        ],
+        [
+          "FOUND_MULTIPLE",
+          "к этому штрихкоду привязано несколько товаров в базе НКТ"
+        ],
+        [
+          "INCORRECT_BARCODE",
+          "введено меньше 8 или больше 14 символов"
+        ],
+        [
+          "EMPTY_MASTER_SKU",
+          "введен неправильный код товара"
+        ],
+        [
+          "NOT_FOUND",
+          "штрихкод не найден в базе НКТ. Будет присвоен временный код."
+        ],
+        [
+          "MASTER_SKU_NOT_FOUND",
+          "код товара не найден"
+        ],
+        [
+          "NON_UNIQUE_MASTER_SKU",
+          "отправлен неуникальный код товара"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "https://kaspi.kz/shop/api/v2/nct\nPOST /api/v2/nct\nHTTP/1.1\nHost: kaspi.kz/shop\nContent-Type: application/vnd.api+json\nX-Auth-Token:token\n{\n\"items\": [\n{\n\"masterSku\": \"100039335\",\n\"barcode\": \"0745125484556\"\n},\n{\n\"masterSku\": \"128000782\",\n\"barcode\": \"4820072970485\"\n},\n{\n\"masterSku\": \"101475172\",\n\"barcode\": \"0200055613402\"\n}\n]\n}\nОтвет\n{\n\"merchantUid\": \"190072\",\n\"items\": [\n{\n\"masterSku\": \"101475172\",\n\"barcode\": \"0200055613402\",\n\"status\": \"ALREADY_ADDED\"\n},\n{\n\"masterSku\": \"128000782\",\n\"barcode\": \"4820072970485\",\n\"status\": \"OK\"\n},\n{\n\"masterSku\": \"100039335\",\n\"barcode\": \"0745125484556\",\n\"status\": \"FOUND_MULTIPLE\"\n},\n{\n\"masterSku\": \"100039335\",\n\"barcode\": \"0200055613402\",\n\"status\": \"OK\"\n}\n]\n}\nОтвет в случае ошибки\n{\n\"merchantUid\": \"190072\",\n\"items\": [\n{\n\"masterSku\": \"100039335\",\n\"barcode\": \"0745125484556\",\n\"status\": \"MASTER_SKU_NOT_FOUND\"\n},\n{\n\"masterSku\": \"128000782\",\n\"barcode\": \"0745125484556\",\n\"status\": \"MASTER_SKU_NOT_FOUND\"\n},\n{\n\"masterSku\": \"101475172\",\n\"barcode\": \"0745125484556\",\n\"status\": \"MASTER_SKU_NOT_FOUND\"\n}\n]\n}"
+      }
+    ]
+  },
+  "orders/q3201": {
+    "section": "orders",
+    "qid": "q3201",
+    "order": 15,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q3201",
+    "title": "Как с помощью API в Магазине на Kaspi.kz получить список моих заказов?",
+    "updated": "11.06.2026",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите информацию о каждом заказе."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "page[number]",
+          "Номер страницы с результатом запроса\nНа одной странице может быть максимум 100 заказов\nУкажите номер нужной страницы, начиная с 0"
+        ],
+        [
+          "page[size]",
+          "Количество заказов, которое будет на одной странице в ответе\nМаксимум — 100"
+        ],
+        [
+          "filter[orders][state]",
+          "Состояние заказа"
+        ],
+        [
+          "",
+          "NEW\nSIGN_REQUIRED\nPICKUP\nDELIVERY\nKASPI_DELIVERY\nARCHIVE",
+          "новый\nнужно подписать документы\nсамовывоз\nваша доставка\nKaspi Доставка\nархивный"
+        ],
+        [
+          "filter[orders][creationDate]",
+          "Дата создания заказа\nУказывается в миллисекундах"
+        ],
+        [
+          "",
+          "[$ge]\n[$le]",
+          "начальное значение\nконечное значение"
+        ],
+        [
+          "filter[orders][status]",
+          "Статус заказа"
+        ],
+        [
+          "",
+          "APPROVED_BY_BANK\nACCEPTED_BY_MERCHANT\nCOMPLETED\nCANCELLED\nCANCELLING\nKASPI_DELIVERY_RETURN_REQUESTED\nRETURNED",
+          "продавец должен его принять\nпринят\nзавершен\nотменен\nв процессе отмены\nожидает возврата\nвозвращен"
+        ],
+        [
+          "filter[orders][deliveryType]",
+          "Способ доставки\nИспользуйте, только если filter[orders][state] не равен PICKUP\nDELIVERY, KASPI_DELIVERY или PICKUP"
+        ],
+        [
+          "",
+          "PICKUP\nDELIVERY",
+          "самовывоз\nдоставка"
+        ],
+        [
+          "filter[orders][signatureRequired]",
+          "Подписание документов\nИспользуйте, если filter[orders][state] не равен SIGN_REQUIRED"
+        ],
+        [
+          "",
+          "true\nfalse",
+          "необходимо\nне требуется"
+        ],
+        [
+          "include[orders]",
+          "Дополнительные данные о заказе"
+        ],
+        [
+          "",
+          "user",
+          "Информация о покупателе, который оформил заказ"
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "code",
+          "Номер заказа"
+        ],
+        [
+          "totalPrice",
+          "Общая сумма заказа в теңге"
+        ],
+        [
+          "customer",
+          "ФИО и номер телефона покупателя"
+        ],
+        [
+          "deliveryMode",
+          "Способ доставки"
+        ],
+        [
+          "",
+          "DELIVERY_LOCAL",
+          "по городу — Kaspi Доставка или силами продавца"
+        ],
+        [
+          "DELIVERY_PICKUP\n\"isKaspiDelivery\": true\nDELIVERY_REGIONAL_TODOOR\n\"isKaspiDelivery\": true",
+          "доставка в Kaspi Postomat\nKaspi Доставка"
+        ],
+        [
+          "DELIVERY_PICKUP\n\"isKaspiDelivery\": false\nDELIVERY_REGIONAL_PICKUP",
+          "самовывоз\nдоставка по области до склада с зоной выдачи заказов, покупатель заберет самовывозом"
+        ],
+        [
+          "paymentMode",
+          "Способ оплаты заказа"
+        ],
+        [
+          "",
+          "PAY_WITH_CREDIT\nPREPAID",
+          "Кредит на Покупки\nбезналичная оплата"
+        ],
+        [
+          "recipient",
+          "ФИО и номер доверенного получателя"
+        ],
+        [
+          "signatureRequired",
+          "Подписать кредит"
+        ],
+        [
+          "",
+          "true\nfalse",
+          "необходимо\nне нужно"
+        ],
+        [
+          "creditTerm",
+          "Срок Кредита на Покупки"
+        ],
+        [
+          "preOrder",
+          "Оформлен по предзаказу"
+        ],
+        [
+          "",
+          "true\nfalse",
+          "да\nнет"
+        ],
+        [
+          "state",
+          "Состояние заказа"
+        ],
+        [
+          "",
+          "NEW\nSIGN_REQUIRED\nPICKUP\nDELIVERY\nKASPI_DELIVERY\nARCHIVE",
+          "новый\nнужно подписать документы\nсамовывоз\nваша доставка\nKaspi Доставка\nархивный"
+        ],
+        [
+          "creationDate",
+          "Дата создания заказа\nУказывается в миллисекундах"
+        ],
+        [
+          "approvedByBankDate",
+          "Дата одобрения заказа банком\nУказывается в миллисекундах"
+        ],
+        [
+          "plannedDeliveryDate",
+          "Планируемая дата доставки\nУказывается в миллисекундах"
+        ],
+        [
+          "reservationDate",
+          "Дата доставки по предзаказу\nУказывается в миллисекундах"
+        ],
+        [
+          "status",
+          "Статус заказа"
+        ],
+        [
+          "",
+          "APPROVED_BY_BANK\nACCEPTED_BY_MERCHANT\nCOMPLETED\nCANCELLED\nCANCELLING\nKASPI_DELIVERY_RETURN_REQUESTED\nRETURNED",
+          "продавец должен его принять\nпринят\nзавершен\nотменен\nв процессе отмены\nожидает возврата\nвозвращен"
+        ],
+        [
+          "deliveryCost",
+          "Стоимость доставки"
+        ],
+        [
+          "isImeiRequired",
+          "IMEI-код товара в заказе"
+        ],
+        [
+          "",
+          "true\nfalse",
+          "необходимо указать\nкод не нужен"
+        ],
+        [
+          "id",
+          "Уникальный код"
+        ],
+        [
+          "waybill",
+          "Ссылка на накладную\nНеобходимо распечатать и прикрепить на заказы для Kaspi Доставки"
+        ],
+        [
+          "courierTransmissionPlanningDate",
+          "Планируемая дата передачи заказа курьеру Kaspi Доставки\nУказывается в миллисекундах"
+        ],
+        [
+          "courierTransmissionDate",
+          "Фактическая дата передачи заказа курьеру\nУказывается в миллисекундах"
+        ],
+        [
+          "deliveryAddress",
+          "Адрес доставки"
+        ],
+        [
+          "waybillNumber",
+          "Номер накладной"
+        ],
+        [
+          "category",
+          "Категория товара"
+        ],
+        [
+          "deliveryCostForSeller",
+          "Стоимость доставки для продавца"
+        ],
+        [
+          "express",
+          "Покупатель выбрал Express-доставку"
+        ],
+        [
+          "",
+          "true\nfalse",
+          "да\nнет"
+        ],
+        [
+          "returnedToWarehouse",
+          "Заказ возвращен в пункт приема"
+        ],
+        [
+          "",
+          "true\nfalse",
+          "да\nнет"
+        ],
+        [
+          "entries",
+          "Состав заказа"
+        ],
+        [
+          "user",
+          "Покупатель"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "GET\nhttps://kaspi.kz/shop/api/v2/orders?page[number]=0&page[size]=20&filter[orders][state]=NEW\n&filter[orders][creationDate][$ge]=1478736000000&filter[orders][creationDate][$le]=1479945600000\n&filter[orders][status]=APPROVED_BY_BANK&filter[orders][deliveryType]=PICKUP\n&filter[orders][signatureRequired]=false&include[orders]=user\nContent-Type:application/vnd.api+json\nX-Auth-Token: <token>"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"data\": [\n{\n\"type\": \"orders\",\n\"id\": \"orderID\",\n\"attributes\": {\n\"customer\": {\n\"firstName\": \"Иван Иваныч\",\n\"lastName\": \"Иванов\",\n\"cellPhone\": \"7xx0xxxxxx\"\n},\n\"code\": \"ordercode\",\n\"totalPrice\": 96045,\n\"deliveryMode\":\n\"DELIVERY_PICKUP\",\n\"paymentMode\": \"PAY_WITH_CREDIT\",\n\"recipient\": {\n\"firstName\": \"Иван Иваныч\",\n\"lastName\": \"Иванов\",\n\"cellPhone\": \"7xx0xxxxxx\"\n},\n\"signatureRequired\": false,\n\"state\": \"PICKUP\",\n\"creationDate\": 1479470446241,\n\"approvedByBankDate\":1479470451108,\n\"status\": \"ACCEPTED_BY_MERCHANT\",\n\"deliveryCost\": 1000,\n\"isImeiRequired\": false\n},\n\"relationships\": {\n\"entries\": {\n\"links\": {\n\"self\": \"/v2/orders/orderID/relationships/entries\",\n\"related\": \"/v2/orders/orderID/entries\"\n}\n},\n\"user\": {\n\"links\": {\n\"self\": \"/v2/orders/orderID/relationships/user\",\n\"related\": \"/v2/orders/orderID/user\"\n},\n\"data\": {\n\"type\": \"customers\",\n\"id\": \"customerID\"\n}\n}\n},\n\"links\": {\n\"self\": \"/v2/orders/orderID\"\n}\n}\n],\n\"included\": [\n{\n\"type\": \"customers\",\n\"id\": \"customerID\",\n\"attributes\": {\n\"firstName\": \"Иван\",\n\"lastName\": \"Иваныч\",\n\"cellPhone\": \"7xx0xxxxxx\"\n},\n\"relationships\": {},\n\"links\": {\n\"self\":\"/v2/customers/customerID\"\n}\n}\n],\n\"meta\": {\n\"pageCount\": 1,\n\"totalCount\": 1\n}\n}"
+      }
+    ]
+  },
+  "orders/q3202": {
+    "section": "orders",
+    "qid": "q3202",
+    "order": 16,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q3202",
+    "title": "Как с помощью API в Магазине на Kaspi.kz получить основную информацию о заказе, если у меня есть его код?",
+    "updated": "20.03.2026",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите информацию о заказе."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "filter[orders][code]",
+          "Номер заказа\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите список заказов;\n• скопируйте значение атрибута «code»."
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "id",
+          "Уникальный код заказа\nДля \"type\": \"orders\""
+        ],
+        [
+          "code",
+          "Номер заказа"
+        ],
+        [
+          "totalPrice",
+          "Общая сумма заказа в теңге"
+        ],
+        [
+          "customer",
+          "ФИО и номер телефона покупателя"
+        ],
+        [
+          "paymentMode",
+          "Способ оплаты заказа"
+        ],
+        [
+          "",
+          "PAY_WITH_CREDIT\nPREPAID",
+          "Кредит на Покупки\nбезналичная оплата"
+        ],
+        [
+          "plannedDeliveryDate",
+          "Планируемая дата доставки\nУказывается в миллисекундах"
+        ],
+        [
+          "creationDate",
+          "Дата получения заказа\nУказывается в миллисекундах"
+        ],
+        [
+          "deliveryCostForSeller",
+          "Стоимость доставки для продавца"
+        ],
+        [
+          "isKaspiDelivery",
+          "Kaspi Доставка"
+        ],
+        [
+          "",
+          "true\nfalse",
+          "да\nнет"
+        ],
+        [
+          "deliveryMode",
+          "Способ доставки"
+        ],
+        [
+          "",
+          "DELIVERY_LOCAL",
+          "по городу — Kaspi Доставка или силами продавца"
+        ],
+        [
+          "",
+          "DELIVERY_PICKUP\n\"isKaspiDelivery\": true\nDELIVERY_REGIONAL_TODOOR\n\"isKaspiDelivery\": true",
+          "доставка в Kaspi Postomat\nKaspi Доставка"
+        ],
+        [
+          "",
+          "DELIVERY_PICKUP\n\"isKaspiDelivery\": false\nDELIVERY_REGIONAL_PICKUP",
+          "самовывоз\nдоставка по области до склада с зоной выдачи заказов, покупатель заберет самовывозом"
+        ],
+        [
+          "deliveryAddress",
+          "Адрес доставки"
+        ],
+        [
+          "",
+          "streetName\nstreetNumber\ntown\ndistrict\nbuilding\nformattedAddress\nlatitude\nlongitude",
+          "улица\nномер дома\nгород\nрайон\nномер строения\nполный адрес\nГеографические координаты:\nширота\nдолгота"
+        ],
+        [
+          "signatureRequired",
+          "Подписать кредит"
+        ],
+        [
+          "",
+          "true\nfalse",
+          "необходимо\nне нужно"
+        ],
+        [
+          "creditTerm",
+          "Срок Кредита на Покупки"
+        ],
+        [
+          "preOrder",
+          "Оформлен по предзаказу"
+        ],
+        [
+          "",
+          "true\nfalse",
+          "да\nнет"
+        ],
+        [
+          "pickupPointId",
+          "Уникальный код склада с зоной выдачи заказов"
+        ],
+        [
+          "state",
+          "Состояние заказа"
+        ],
+        [
+          "",
+          "NEW\nSIGN_REQUIRED\nPICKUP\nDELIVERY\nKASPI_DELIVERY\nARCHIVE",
+          "новый\nнужно подписать документы\nсамовывоз\nваша доставка\nKaspi Доставка\nархивный"
+        ],
+        [
+          "approvedByBankDate",
+          "Дата одобрения заказа банком\nУказывается в миллисекундах"
+        ],
+        [
+          "status",
+          "Статус заказа"
+        ],
+        [
+          "",
+          "APPROVED_BY_BANK\nACCEPTED_BY_MERCHANT\nCOMPLETED\nCANCELLED\nCANCELLING\nKASPI_DELIVERY_RETURN_REQUESTED\nRETURNED",
+          "продавец должен его принять\nпринят\nзавершен\nотменен\nв процессе отмены\nожидает возврата\nвозвращен"
+        ],
+        [
+          "customer",
+          "Покупатель"
+        ],
+        [
+          "",
+          "id\nname\nfirstName\nlastName",
+          "Уникальный код клиента в системе Магазина на Kaspi.kz\nИмя в системе Магазина на Kaspi.kz\nИмя\nФамилия"
+        ],
+        [
+          "deliveryCost",
+          "Стоимость доставки"
+        ],
+        [
+          "phoneAlias",
+          "Номер телефона покупателя для своей доставки"
+        ],
+        [
+          "completionDate",
+          "Дата выдачи заказа"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "GET\nhttps://kaspi.kz/shop/api/v2/orders?filter[orders][code]=ordercode\nContentType: application/vnd.api+json\nX-Auth-Token:token"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"data\": [\n{\n\"type\": \"orders\",\n\"id\": \"orderId\",\n\"attributes\": {\n\"code\": \"ordercode\",\n\"totalPrice\": 4000.0,\n\"paymentMode\": \"PAY_WITH_CREDIT\",\n\"plannedDeliveryDate\": 1706896790999,\n\"creationDate\": 1706608613252,\n\"deliveryCostForSeller\": 0.0,\n\"isKaspiDelivery\": false,\n\"deliveryMode\": \"DELIVERY_LOCAL\",\n\"completionDate\": 1773901121746,\n\"phoneAlias\": \"+ 7 (705) 943-05-21,1111111111\"\n\"deliveryAddress\": {\n\"streetName\": \"улица Наурызбай батыра\",\n\"streetNumber\": \"154А\",\n\"town\": \"Алматы\",\n\"district\": null,\n\"building\": null,\n\"apartment\": null,\n\"formattedAddress\": \"Алматы, улица Наурызбай батыра, 154А\",\n\"latitude\": 43.240013,\n\"longitude\": 76.938854\n},\n\"signatureRequired\": false,\n\"creditTerm\": 3,\n\"preOrder\": false,\n\"pickupPointId\": «merchant_PP1\",\n\"state\": \"DELIVERY\",\n\"approvedByBankDate\": 1706608657792,\n\"status\": \"ACCEPTED_BY_MERCHANT\",\n\"customer\": {\n\"id\": \"customerId\",\n\"name\": null,\n\"firstName\": \"customerfirstname\",\n\"lastName\": \"customerlastname\"\n},\n\"deliveryCost\": 500.0\n},\n\"relationships\": {\n\"user\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/orderId/relationships/user\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orders/orderId/user\"\n},\n\"data\": {\n\"type\": \"customers\",\n\"id\": \"customerId\"\n}\n},\n\"entries\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/orderId/relationships/entries\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orders/orderId/entries\"\n}\n}\n},\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/orderId\"\n}\n}\n],\n\"included\": [],\n\"meta\": {\n\"pageCount\": 1,\n\"totalCount\": 1\n}\n}"
+      }
+    ]
+  },
+  "orders/q3203": {
+    "section": "orders",
+    "qid": "q3203",
+    "order": 11,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q3203",
+    "title": "Как с помощью API в Магазине на Kaspi.kz получить информацию о товарах в моем заказе?",
+    "updated": "30.05.2025",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите информацию о стоимости заказа и всех товаров, а также об их количестве."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "orderId",
+          "Уникальный код заказа\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите информацию о составе заказа;\n• скопируйте значение атрибута «id» для \"type\": \"orders\"."
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "id",
+          "Уникальный код товара в заказе"
+        ],
+        [
+          "unitType",
+          "Тип товара"
+        ],
+        [
+          "",
+          "MEASURABLE_PIECES\nMEASURABLE\nPIECES",
+          "цельно-весовой\nвесовой\nштучный"
+        ],
+        [
+          "quantity",
+          "Количество каждого товара в заказе"
+        ],
+        [
+          "totalPrice",
+          "Общая стоимость заказа"
+        ],
+        [
+          "weight",
+          "Вес товара\nТолько для товаров, у которых указан вес"
+        ],
+        [
+          "entryNumber",
+          "Порядковый номер товара в заказе"
+        ],
+        [
+          "category",
+          "Код категории"
+        ],
+        [
+          "title",
+          "Название категории"
+        ],
+        [
+          "deliveryCost",
+          "Стоимость доставки"
+        ],
+        [
+          "basePrice",
+          "Стоимость товара"
+        ],
+        [
+          "isImeiRequired",
+          "IMEI-код товара в заказе"
+        ],
+        [
+          "",
+          "true\nfalse",
+          "необходимо указать\nкод не нужен"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "GET\nhttps://kaspi.kz/shop/api/v2/orders/orderID/entries\nContentType: application/vnd.api+json\nX-Auth-Token:token"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"data\": [\n{\n\"type\": \"orderentries\",\n\"id\": \"orderentriesId»,\n\"attributes\": {\n\"unitType\": \"PIECES\",\n\"quantity\": 2,\n\"totalPrice\": 4000.0,\n\"weight\": 2000.0,\n\"entryNumber\": 0,\n\"category\": {\n\"code\": \"Master - Fruits\",\n\"title\": \"Фрукты\"\n},\n\"deliveryCost\": 500.0,\n\"basePrice\": 2000.0,\n\"isImeiRequired\": false\n},\n\"relationships\": {\n\"deliveryPointOfService\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orderentries/orderentriesId/relationships/deliveryPointOfService\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orderentries/orderentriesId/deliveryPointOfService\"\n},\n\"data\": {\n\"type\": \"pointofservices\",\n\"id\": \"pointofservicesId»\n}\n},\n\"product\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orderentries/orderentriesId/relationships/product\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orderentries/orderentriesId/product\"\n},\n\"data\": {\n\"type\": \"masterproducts\",\n\"id\": \"masterproductsId»\n}\n}\n},\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orderentries/orderentriesId\"\n}\n}\n],\n\"included\": []\n}"
+      }
+    ]
+  },
+  "orders/q3204": {
+    "section": "orders",
+    "qid": "q3204",
+    "order": 14,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q3204",
+    "title": "Как с помощью API в Магазине на Kaspi.kz получить информацию об одном товаре в заказе?",
+    "updated": "30.01.2026",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите стоимость каждого товара, а также информацию, сколько таких товаров купил клиент."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "orderentriesId=",
+          "Уникальный код товара в заказе\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите информацию о товарах в заказе;\n• скопируйте значение атрибута «id» для \"type\": \"orderentries\"."
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "id",
+          "Уникальный код товара в заказе"
+        ],
+        [
+          "unitType",
+          "Тип товара"
+        ],
+        [
+          "",
+          "MEASURABLE_PIECES\nMEASURABLE\nPIECES\nMETERED\nMETERED_PIECES",
+          "цельно-весовой\nвесовой\nштучный\nметражный\nштучно-метражный"
+        ],
+        [
+          "minAllowedWeight",
+          "Минимальный вес товара"
+        ],
+        [
+          "quantity",
+          "Количество каждого товара в заказе"
+        ],
+        [
+          "totalPrice",
+          "Общая стоимость заказа"
+        ],
+        [
+          "weight",
+          "Вес товара\nТолько для товаров, у которых указан вес"
+        ],
+        [
+          "entryNumber",
+          "Порядковый номер товара в заказе"
+        ],
+        [
+          "code",
+          "Код категории"
+        ],
+        [
+          "title",
+          "Название категории"
+        ],
+        [
+          "deliveryCost",
+          "Стоимость доставки"
+        ],
+        [
+          "basePrice",
+          "Стоимость товара"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "GET\nhttps://kaspi.kz/shop/api/v2/orderentries/orderentriesId=\nContentType: application/vnd.api+json\nX-Auth-Token:token"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"data\": {\n\"type\": \"orderentries\",\n\"id\": \"orderentriesId\",\n\"attributes\": {\n\"unitType\": \"MEASURABLE_PIECES\",\n\"minAllowedWeight\": 1000.0,\n\"quantity\": 3,\n\"totalPrice\": 5928.0,\n\"weight\": 3800.0,\n\"entryNumber\": 0,\n\"category\": {\n\"code\": \"Master - Umbrellas\",\n\"title\": \"Зонты\"\n},\n\"deliveryCost\": 0.0,\n\"basePrice\": 1560.0\n},\n\"relationships\": {\n\"deliveryPointOfService\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orderentries/orderentriesId/relationships/deliveryPointOfService\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orderentries/orderentriesId/deliveryPointOfService\"\n},\n\"data\": {\n\"type\": \"pointofservices\",\n\"id\": \"pointofservicesId\"\n}\n},\n\"product\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orderentries/orderentriesId/relationships/product\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orderentries/orderentriesId/product\"\n},\n\"data\": {\n\"type\": \"masterproducts\",\n\"id\": \"masterproductsId\"\n}\n}\n},\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orderentries/orderentriesId\"\n}\n},\n\"included\": []\n}"
+      }
+    ]
+  },
+  "orders/q3205": {
+    "section": "orders",
+    "qid": "q3205",
+    "order": 7,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q3205",
+    "title": "Как с помощью API в Магазине на Kaspi.kz узнать, с какого склада покупатель заказал товар?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите название и адрес склада, с которого покупатель заказал товар."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "orderentriesID",
+          "Уникальный код заказа\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите информацию о составе заказа\n• скопируйте значение атрибута «id» для \"type\": \"orderentries\""
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "id",
+          "Уникальный код склада"
+        ],
+        [
+          "address",
+          "Адрес склада"
+        ],
+        [
+          "",
+          "streetName\nstreetNumber\ntown\ndistrict\nbuilding\nformattedAddress\nlatitude\nlongitude",
+          "улица\nномер дома\nгород\nрайон\nномер строения\nполный адрес\nГеографическая координата:\nширота\nдолгота"
+        ],
+        [
+          "displayName",
+          "Код склада"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "GET\nhttps://kaspi.kz/shop/api/v2/orderentries/ orderentriesID/deliveryPointOfService\nContent-Type: application/vnd.api+json\nX-Auth-Token: token"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"data\": {\n\"type\": \"pointofservices\",\n\"id\": \"pointofservicesId\",\n\"attributes\": {\n\"address\": {\n\"streetName\": \" улица Каныша Сатпаева\",\n\"streetNumber\": \" 22/1\",\n\"town\": \"г. Алматы\",\n\"district\": null,\n\"building\": null,\n\"apartment\": null,\n\"formattedAddress\": \"г. Алматы, улица Каныша Сатпаева, 22/1\",\n\"latitude\": 43.23662559520485,\n\"longitude\": 76.93337309399296\n},\n\"displayName\": \"PP1\"\n},\n\"relationships\": {\n\"city\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/pointofservices/pointofservicesId/relationships/city\",\n\"related\": \"https://kaspi.kz/shop/api/v2/pointofservices/pointofservicesId/city\"\n},\n\"data\": {\n\"type\": \"cities\",\n\"id\": \"citiesID»\n}\n}\n},\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/pointofservices/pointofservicesId\"\n}\n},\n\"included\": []\n}"
+      }
+    ]
+  },
+  "orders/q3206": {
+    "section": "orders",
+    "qid": "q3206",
+    "order": 4,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q3206",
+    "title": "Как с помощью API в Магазине на Kaspi.kz узнать адрес склада?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите название и адрес склада."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "pointOfServiceId",
+          "Уникальный код склада\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz. получите информацию о складе, с которого покупатель заказал товар;\n• скопируйте значение атрибута «id» для \"type\": \"pointofservices\""
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "id",
+          "Уникальный код склада"
+        ],
+        [
+          "address",
+          "Адрес склада"
+        ],
+        [
+          "",
+          "streetName\nstreetNumber\ntown\ndistrict\nbuilding\nformattedAddress\nlatitude\nlongitude",
+          "улица\nномер дома\nгород\nрайон\nномер строения\nполный адрес\nГеографическая координата:\nширота\nдолгота"
+        ],
+        [
+          "displayName",
+          "Название склада"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "GET\nhttps://kaspi.kz/shop/api/v2/pointofservices/pointofservicesId\nContent-Type: application/vnd.api+json\nX-Auth-Token: token"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"data\": {\n\"type\": \"pointofservices\",\n\"id\": \"pointofservicesId\",\n\"attributes\": {\n\"address\": {\n\"streetName\": \" улица Каныша Сатпаева\",\n\"streetNumber\": \" 22/1\",\n\"town\": \"г. Алматы\",\n\"district\": null,\n\"building\": null,\n\"apartment\": null,\n\"formattedAddress\": \"г. Алматы, улица Каныша Сатпаева, 22/1\",\n\"latitude\": 43.23662559520485,\n\"longitude\": 76.93337309399296\n},\n\"displayName\": \"PP1\"\n},\n\"relationships\": {\n\"city\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/pointofservices/pointofservicesId/relationships/city\",\n\"related\": \"https://kaspi.kz/shop/api/v2/pointofservices/pointofservicesId/city\"\n},\n\"data\": {\n\"type\": \"cities\",\n\"id\": \"citiesID\"\n}\n}\n},\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/pointofservices/pointofservicesId\"\n}\n},\n\"included\": []\n}"
+      }
+    ]
+  },
+  "orders/q3207": {
+    "section": "orders",
+    "qid": "q3207",
+    "order": 8,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q3207",
+    "title": "Как с помощью API в Магазине на Kaspi.kz получить описание товаров в заказе?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите код товара в Магазине на Kaspi.kz, название и бренд."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "orderentriesID",
+          "Уникальный код заказа\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите состав заказа;\n• скопируйте значение атрибута «id» для \"type\": \"orderentries\"."
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "id",
+          "Уникальный код товара в заказе"
+        ],
+        [
+          "code",
+          "Код товара в Магазине на Kaspi.kz"
+        ],
+        [
+          "name",
+          "Название"
+        ],
+        [
+          "manufacturer",
+          "Бренд"
+        ],
+        [
+          "category",
+          "Название категории"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "GET\nhttps://kaspi.kz/shop/api/v2/orderentries/orderentriesID/product\nContent-Type: application/vnd.api+json\nX-Auth-Token: token"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"data\": {\n\"type\": \"masterproducts\",\n\"id\": \"masterproductsId»,\n\"attributes\": {\n\"code\": \"103403297\",\n\"name\": \"Фруктовик яблоко черный принц Польша 1 кг\",\n\"category\": \"Фрукты\"\n},\n\"relationships\": {\n\"merchantProduct\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/masterproducts/masterproductsID/relationships/merchantProduct\",\n\"related\": \"https://kaspi.kz/shop/api/v2/masterproducts/masterproductsID/merchantProduct\"\n},\n\"data\": null\n}\n},\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/masterproducts/masterproductsID\"\n}\n},\n\"included\": []\n}"
+      }
+    ]
+  },
+  "orders/q3208": {
+    "section": "orders",
+    "qid": "q3208",
+    "order": 9,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q3208",
+    "title": "Как с помощью API в Магазине на Kaspi.kz получить описание одного товара в заказе?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите код вашего товара, название и бренд."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "masterproductsID==",
+          "Уникальный код товара в заказе\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите описание товара из заказа;\n• скопируйте значение атрибута «id» для \"type\": \"masterproducts\"."
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "id",
+          "Уникальный код товара продавца в заказе"
+        ],
+        [
+          "code",
+          "Код товара в системе продавца"
+        ],
+        [
+          "name",
+          "Название"
+        ],
+        [
+          "manufacturer",
+          "Бренд"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "GET\nhttps://kaspi.kz/shop/api/v2/masterproducts/masterproductsID/merchantProduct\nContent-Type: application/vnd.api+json\nX-Auth-Token: token"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"data\": {\n\"type\": \"merchantproducts\",\n\"id\": \"merchantproductsID»,\n\"attributes\": {\n\"code\": \"103403297\",\n\"name\": \"Фруктовик яблоко черный принц Польша 1 кг\"\n},\n\"relationships\": {},\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/merchantproducts/merchantproductsID\"\n}\n},\n\"included\": []\n}"
+      }
+    ]
+  },
+  "orders/q3209": {
+    "section": "orders",
+    "qid": "q3209",
+    "order": 0,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q3209",
+    "title": "Как с помощью API в Магазине на Kaspi.kz изменить статус заказа?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите информацию о заказе и его новый статус."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "type",
+          "Тип объекта\nВ этом запросе — orders"
+        ],
+        [
+          "id",
+          "Уникальный код заказа\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите информацию о составе заказа;\n• скопируйте значение атрибута «id» для \"type\": \"orders\"."
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "Code",
+          "Номер заказа\nЧтобы его узнать:\nс помощью API в Магазине на Kaspi.kz получите список заказов;\nскопируйте значение атрибута «code»."
+        ],
+        [
+          "Status",
+          "Статус заказа"
+        ],
+        [
+          "",
+          "ACCEPTED_BY_MERCHANT\nCOMPLETED\nCANCELLED\nARRIVED\nARRIVED_BACKWARD\nASSEMBLE",
+          "Принят\nВыдан покупателю\nДля заказов со статусом «ACCEPTED_BY_MERCHANT»\nОтменен\nДля заказов со статусом «ACCEPTED_BY_MERCHANT» или «APPROVED_BY_BANK»\nПрибыл на склад\nДля товаров по предзаказу\nВозвращенный товар прибыл на склад\nДля заказов со статусом CANCELLING или KASPI_DELIVERY_RETURN_REQUESTED\nСкомплектован\nДля заказов со статусом ACCEPTED_BY_MERCHANT"
+        ],
+        [
+          "cancellationReason",
+          "Причина отмены\nНеобходима при статусе заказа CANCELLED"
+        ],
+        [
+          "",
+          "BUYER_CANCELLATION_BY_MERCHANT\n• BUYER_NOT_REACHABLE\n• MERCHANT_OUT_OF_STOCK",
+          "Покупатель отменил заказ\nНе удалось связаться с покупателем\nТовара нет в наличии"
+        ],
+        [
+          "cancellationComment",
+          "Комментарий продавца\nДля заказов со статусом CANCELLING\nМаксимум 1000 символов"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "https://kaspi.kz/shop/api/v2/orders\nPOST /api/v2/orders\nHTTP/1.1\nHost: kaspi.kz/shop\nContent-Type: application/vnd.api+json\nX-Auth-Token:token\n{\n\"data\":\n{\n\"type\": \"orders\",\n\"id\": \"ordersID=\",\n\"attributes\": {\n\"code\": \"ordercode \",\n\"status\": \"ARRIVED\"\n}\n}"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"data\": {\n\"type\": \"orders\",\n\"id\": \"ordersID\",\n\"attributes\": {\n\"code\": \"ordercode\",\n\"status\": \"ARRIVED\"\n},\n\"relationships\": {\n\"user\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/ordersID/relationships/user\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orders/ordersID/user\"\n},\n\"data\": null\n},\n\"entries\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/ordersID/relationships/entries\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orders/ordersID/entries\"\n}\n}\n},\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/ordersID\"\n}\n},\n\"included\": []\n}"
+      }
+    ]
+  },
+  "orders/q3210": {
+    "section": "orders",
+    "qid": "q3210",
+    "order": 2,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q3210",
+    "title": "Как с помощью API в Магазине на Kaspi.kz сформировать накладную для передачи заказа на Kaspi Доставку?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого измените статус товара на «Передача». Чтобы это сделать, отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите информацию о заказе и его новый статус."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "type",
+          "Тип объекта\nВ этом запросе — orders"
+        ],
+        [
+          "id",
+          "Уникальный код заказа\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите информацию о составе заказа;\n• скопируйте значение атрибута «id» для \"type\": \"orders\"."
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "numberOfSpace",
+          "Количество накладных\nУказывается самостоятельно"
+        ],
+        [
+          "status",
+          "Статус заказа\nВ этом ответе — ASSEMBLE"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "https://kaspi.kz/shop/api/v2/orders\nPOST /api/v2/orders\nHTTP/1.1\nHost: kaspi.kz/shop\nContent-Type: application/vnd.api+json\nX-Auth-Token:token\n{\n\"data\":\n{\n\"type\": \"orders\",\n\"id\": \" ordersID\",\n\"attributes\": {\n\"status\": \"ASSEMBLE\",\n\"numberOfSpace\": \"2\"\n}\n}\n}"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"data\": {\n\"type\": \"orders\",\n\"id\": \"ordersID=\",\n\"attributes\": {\n\"numberOfSpace\": 2,\n\"status\": \"ASSEMBLE\"\n},\n\"relationships\": {\n\"user\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/ordersID=/relationships/user\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orders/ordersID=/user\"\n},\n\"data\": null\n},\n\"entries\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/ordersID=/relationships/entries\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orders/ordersID=/entries\"\n}\n}\n},\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/ordersID=\"\n}\n},\n\"included\": []\n}"
+      }
+    ]
+  },
+  "orders/q3211": {
+    "section": "orders",
+    "qid": "q3211",
+    "order": 1,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q3211",
+    "title": "Как с помощью API в Магазине на Kaspi.kz принять новый заказ?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите информацию о заказе и его новый статус."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "type",
+          "Тип объекта\nВ этом запросе — orders"
+        ],
+        [
+          "id",
+          "Уникальный код заказа\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите информацию о составе заказа;\n• скопируйте значение атрибута «id» для \"type\": \"orders\"."
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "Code",
+          "Номер заказа\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите список заказов;\n• скопируйте значение атрибута «code»."
+        ],
+        [
+          "Status",
+          "Статус заказа\nВ этом ответе — ACCEPTED_BY_MERCHANT"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "https://kaspi.kz/shop/api/v2/orders\nPOST /api/v2/orders\nHTTP/1.1\nHost: kaspi.kz/shop\nContent-Type: application/vnd.api+json\nX-Auth-Token:token\n{\n\"data\":\n{\n\"type\": \"orders\",\n\"id\": \"ordersID\",\n\"attributes\": {\n\"code\": \"ordercode\",\n\"status\": \"ACCEPTED_BY_MERCHANT\"\n}\n}"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"data\": {\n\"type\": \"orders\",\n\"id\": \"ordersID\",\n\"attributes\": {\n\"code\": \"ordercode\",\n\"status\": \"ACCEPTED_BY_MERCHANT\"\n},\n\"relationships\": {\n\"user\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/ordersID/relationships/user\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orders/ordersID/user\"\n},\n\"data\": null\n},\n\"entries\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/ordersID/relationships/entries\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orders/ordersID/entries\"\n}\n}\n},\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/ordersID\"\n}\n},\n\"included\": []\n}"
+      }
+    ]
+  },
+  "orders/q3212": {
+    "section": "orders",
+    "qid": "q3212",
+    "order": 5,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q3212",
+    "title": "Как с помощью API в Магазине на Kaspi.kz изменить статус заказа на «Выдан»",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "1. Оставьте параметр X-Security-Code пустым.",
+      "Это необходимо, чтобы клиент получил код в мобильном приложении Kaspi.kz.",
+      "2. Отправьте повторный запрос.",
+      "Код, который вам назвал клиент, вставьте в параметр X-Security-Code.",
+      "В ответе вы получите информацию, какой теперь статус у заказа."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "X-Security-Code",
+          "Код, который отправлен клиенту в мобильном приложении Kaspi.kz"
+        ],
+        [
+          "X-Send-Code",
+          "Статус отправки кода\nВ этом запросе — true"
+        ],
+        [
+          "type",
+          "Цель запроса\nВ этом случае — orders"
+        ],
+        [
+          "id",
+          "Уникальный код заказа\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите информацию о составе заказа;\n• скопируйте значение атрибута «id» для \"type\": \"orders\"."
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "code",
+          "Номер заказа\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите список заказов;\n• скопируйте значение атрибута «code»."
+        ],
+        [
+          "status",
+          "Статус, который должен получить заказ\nВ этом запросе — COMPLETED"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример первого запроса — для отправки кода покупателю",
+        "text": "https://kaspi.kz/shop/api/v2/orders\nPOST /api/v2/orders\nHTTP/1.1\nHost: kaspi.kz/shop\nContent-Type: application/vnd.api+json\nX-Auth-Token:token\nX-Security-Code:\nX-Send-Code: true\n{\n\"data\": {\n\"type\": \"orders\",\n\"id\": \"ordersID\",\n\"attributes\": {\n\"code\": \"ordercode\",\n\"status\": \"COMPLETED\"\n}\n}"
+      },
+      {
+        "title": "Посмотреть пример второго запроса — для завершения заказа",
+        "text": "https://kaspi.kz/shop/api/v2/orders\nPOST /api/v2/orders\nHTTP/1.1\nHost: kaspi.kz/shop\nContent-Type: application/vnd.api+json\nX-Auth-Token:token\nX-Security-Code: 1234\nX-Send-Code: true\n{\n\"data\": {\n\"type\": \"orders\",\n\"id\": \"ordersId\",\n\"attributes\": {\n\"code\": \"ordercode\",\n\"status\": \"COMPLETED\"\n}\n}"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"data\": {\n\"type\": \"orders\",\n\"id\": \"ordersID\",\n\"attributes\": {\n\"code\": \"ordercode\",\n\"status\": \"COMPLETED\"\n},\n\"relationships\": {\n\"user\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/ordersID/relationships/user\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orders/ordersID/user\"\n},\n\"data\": null\n},\n\"entries\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/ordersID/relationships/entries\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orders/ordersID/entries\"\n}\n}\n},\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/ordersID\"\n}\n},\n\"included\": []\n}"
+      }
+    ]
+  },
+  "orders/q3213": {
+    "section": "orders",
+    "qid": "q3213",
+    "order": 3,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q3213",
+    "title": "Как с помощью API в Магазине на Kaspi.kz отменить заказ?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите информацию о статусе заказа. Она будет совпадать с данными в запросе, если он проведен успешно."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "type",
+          "Цель запроса\nВ этом случае — orders"
+        ],
+        [
+          "id",
+          "Уникальный код заказа\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите информацию о составе заказа;\n• скопируйте значение атрибута «id» для \"type\": \"orders\"."
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "code",
+          "Номер заказа\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите список заказов;\n• скопируйте значение атрибута «code»."
+        ],
+        [
+          "status",
+          "Статус, который должен получить заказ"
+        ],
+        [
+          "",
+          "CANCELLED",
+          "Отменен\nИспользуйте, если текущий статус — ACCEPTED_BY_MERCHANT"
+        ],
+        [
+          "cancellationReason",
+          "Причина отмены"
+        ],
+        [
+          "",
+          "BUYER_CANCELLATION_BY_MERCHANT\nBUYER_NOT_REACHABLE\nMERCHANT_OUT_OF_STOCK",
+          "Отказ покупателя\nНе удалось связаться с покупателем\nТовара нет в наличии"
+        ],
+        [
+          "cancellationComment",
+          "Комментарий при отмене заказа\nНе должен быть больше тысячи знаков"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "https://kaspi.kz/shop/api/v2/orders\nPOST /api/v2/orders\nHTTP/1.1\nHost: kaspi.kz/shop\nContent-Type: application/vnd.api+json\nX-Auth-Token:token\n{\n\"data\": {\n\"type\": \"orders\",\n\"id\": \"ordersID\",\n\"attributes\": {\n\"code\": \"ordercode\",\n\"status\": \"CANCELLED\",\n\"cancellationReason\": \"BUYER_CANCELLATION_BY_MERCHANT\"\n}\n}"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"data\": {\n\"type\": \"orders\",\n\"id\": \"ordersID\",\n\"attributes\": {\n\"cancellationReason\": \"BUYER_CANCELLATION_BY_MERCHANT\",\n\"status\": \"CANCELLED\"\n},\n\"relationships\": {\n\"user\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/ordersID/relationships/user\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orders/ordersID/user\"\n},\n\"data\": null\n},\n\"entries\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/ordersID/relationships/entries\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orders/ordersID/entries\"\n}\n}\n},\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orders/ordersID\"\n}\n},\n\"included\": []\n}"
+      }
+    ]
+  },
+  "orders/q3214": {
+    "section": "orders",
+    "qid": "q3214",
+    "order": 10,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q3214",
+    "title": "Как с помощью API в Магазине на Kaspi.kz удалить некоторые товары в заказе?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите обновленную информацию о количестве товаров в заказе."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "type",
+          "Цель запроса\nВ этом случае — orderEntryCancelOperation"
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "notes",
+          "Комментарий при отмене"
+        ],
+        [
+          "remainedWeight",
+          "Сколько теперь весит заказ\nИнформация будет в ответе на API-запрос"
+        ],
+        [
+          "remainedQuantity",
+          "Сколько товаров останется в заказе\nЕсли было 10 товаров и вы отменяете 2, то значение атрибута — 8"
+        ],
+        [
+          "id",
+          "Уникальный код товара\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите информацию о товарах в заказе;\n• скопируйте значение атрибута «id» для \"type\": \"orderentries\"."
+        ],
+        [
+          "reason",
+          "Причина отмены"
+        ],
+        [
+          "",
+          "BUYER_CANCELLATION_BY_MERCHANT\nBUYER_NOT_REACHABLE\nMERCHANT_OUT_OF_STOCK",
+          "Отказ покупателя\nНе удалось связаться с покупателем\nНет в наличии"
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "https://kaspi.kz/shop/api/v2/orderEntryCancelOperation\nPOST /api/v2/orders\nHTTP/1.1\nHost: kaspi.kz/shop\nContent-Type: application/vnd.api+json\nX-Auth-Token: token\n{\n\"data\": {\n\"type\": \"orderEntryCancelOperation\",\n\"attributes\": {\n\"notes\": \"Отказ клиента\",\n\"remainedQuantity\": 1,\n\"reason\": \"BUYER_CANCELLATION_BY_MERCHANT\"\n},\n\"relationships\": {\n\"entry\": {\n\"data\":{\n\"type\": \"orderentries\",\n\"id\": \"orderentriesID\"\n}\n}\n}\n}\n}"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"data\": {\n\"type\": \"orderEntryCancelOperation\",\n\"id\": \"orderEntryCancelOperationID»,\n\"attributes\": {\n\"remainedWeight\": 0.0,\n\"remainedQuantity\": 0,\n\"status\": \"INPROGRESS\"\n},\n\"relationships\": {\n\"entry\": {\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orderEntryCancelOperation/orderEntryCancelOperationID/relationships/entry\",\n\"related\": \"https://kaspi.kz/shop/api/v2/orderEntryCancelOperation/orderEntryCancelOperationID/entry\"\n},\n\"data\": null\n}\n},\n\"links\": {\n\"self\": \"https://kaspi.kz/shop/api/v2/orderEntryCancelOperation/orderEntryCancelOperationID\"\n}\n},\n\"included\": []\n}"
+      }
+    ]
+  },
+  "orders/q3215": {
+    "section": "orders",
+    "qid": "q3215",
+    "order": 6,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q3215",
+    "title": "Как с помощью API в Магазине на Kaspi.kz изменить вес товаров в заказе?",
+    "updated": "12.06.2024",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите обновленную информацию о количестве товаров в заказе и их весе."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "remainedWeight",
+          "Сколько весит товар\nЕсли указать 0, товар удалится из заказа"
+        ],
+        [
+          "remainedQuantity",
+          "Сколько единиц товара должно быть в заказе"
+        ],
+        [
+          "reason",
+          "Причина изменений"
+        ],
+        [
+          "",
+          "PRODUCT_UNDERWEIGHT",
+          "недовес по товару"
+        ],
+        [
+          "notes",
+          "Комментарий продавца об изменениях"
+        ],
+        [
+          "id",
+          "Уникальный код заказа\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите информацию о товарах в заказе;\n• скопируйте значение атрибута «id» для \"type\": \"orderentries\"."
+        ]
+      ],
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "remainedQuantity",
+          "Сколько единиц товара должно быть в заказе"
+        ],
+        [
+          "remainedWeight",
+          "Сколько весит товар\nЕсли указать 0, товар удалится из заказа"
+        ],
+        [
+          "reason",
+          "Причина изменений"
+        ],
+        [
+          "",
+          "PRODUCT_UNDERWEIGHT",
+          "недовес по товару"
+        ],
+        [
+          "notes",
+          "Комментарий продавца об изменениях"
+        ],
+        [
+          "id",
+          "Уникальный код заказа\nЧтобы его узнать:\n• с помощью API в Магазине на Kaspi.kz получите информацию о товарах в заказе;\n• скопируйте значение атрибута «id» для \"type\": \"orderentries\"."
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "request PUT\nurl: https://kaspi.kz/shop/api/orderPartialCancel/MDAwOTIwMDA\nContent-Type: application/vnd.api+json\nX-Auth-Token: token\n[\n{\n\"entry\": {\n\"id\": \"orderentriesId\"\n},\n\"remainedWeight\": 1000,\n\"remainedQuantity\":1,\n\"reason\": \"PRODUCT_UNDERWEIGHT\",\n\"notes\": \"Недовес по товару\"\n}\n]"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"orderCancelEntries\": [\n{\n\"id\": \"Mjc0ODI0MzEwMjkyOTQ\",\n\"notes\": \"Недовес по товару\",\n\"entry\": {\n\"id\": \"orderentriesId\"\n},\n\"remainedQuantity\": 1,\n\"remainedWeight\": 1000.0\n}\n],\n\"status\": \"INPROGRESS\"\n}"
+      }
+    ]
+  },
+  "orders/q4026": {
+    "section": "orders",
+    "qid": "q4026",
+    "order": 12,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q4026",
+    "title": "Как с помощью API в Магазине на Kaspi.kz указать IMEI-код телефона в заказе?",
+    "updated": "10.06.2025",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите информацию, что IMEI-код привязан к товарам в заказе."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "type",
+          "Цель запроса\nВ этом случае — orderEntryImeiOperation"
+        ]
+      ],
+      [
+        [
+          "Атрибут",
+          "Значение"
+        ],
+        [
+          "items",
+          "Количество устройств одной модели в заказе"
+        ],
+        [
+          "imei",
+          "IMEI-код устройства\nЕсли в устройство можно установить несколько SIM-карт, то кодов тоже будет несколько — по количеству слотов."
+        ],
+        [
+          "id",
+          "Уникальный код товара\nЧтобы его узнать:\nс помощью API в Магазине на Kaspi.kz получите информацию о товарах в заказе;\nскопируйте значение атрибута «id» для \"type\": \"orderentries\"."
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса — устройство с двумя SIM-картами",
+        "text": "https://kaspi.kz/shop/api/v2/orderEntryImeiOperation\nPOST /api/v2/orders\nHost: kaspi.kz/shop\nContent-Type: application/vnd.api+json\nX-Auth-Token: token\n{\n\"data\": {\n\"type\": \"orderEntryImeiOperation\",\n\"attributes\": {\n\"items\": [\n{\n\"imei\": [\"imei1\", \"imei2\"]\n}\n]\n},\n\"relationships\": {\n\"entry\": {\n\"data\": {\n\"type\": \"orderentries\",\n\"id\": \"orderentriesID\"\n}\n}\n}\n}\n}"
+      },
+      {
+        "title": "Посмотреть пример запроса — два устройства одной модели",
+        "text": "https://kaspi.kz/shop/api/v2/orderEntryImeiOperation\nPOST /api/v2/orders\nHost: kaspi.kz/shop\nContent-Type: application/vnd.api+json\nX-Auth-Token: token\n{\n\"data\": {\n\"type\": \"orderEntryImeiOperation\",\n\"attributes\": {\n\"items\": [\n{\n\"imei\": [\"imei1\", \"imei2\"]\n},\n{\n\"imei\": [\"imei3\", \"imei4\"]\n}\n]\n},\n\"relationships\": {\n\"entry\": {\n\"data\": {\n\"type\": \"orderentries\",\n\"id\": \"orderentriesID\"\n}\n}\n}\n}\n}"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"data\": {\n\"type\": \"orderEntryImeiOperation\",\n\"id\": \"orderId\",\n\"attributes\": {\n\"status\": \"SUCCESSFUL\"\n},\n\"relationships\": {\n\"entry\": {\n\"links\": {\n\"self\":\n\"https://kaspi.kz/shop/api/v2/orderEntryImeiOperation/NTUwNjg4OTQ4/relationship\ns/entry\",\n\"related\":\n\"https://kaspi.kz/shop/api/v2/orderEntryImeiOperation/NTUwNjg4OTQ4/entry\"\n},\n\"data\": null\n}\n},\n\"links\": {\n\"self\":\n\"https://kaspi.kz/shop/api/v2/orderEntryImeiOperation/NTUwNjg4OTQ4\"\n}\n},\n\"included\": []\n}"
+      }
+    ]
+  },
+  "orders/q4027": {
+    "section": "orders",
+    "qid": "q4027",
+    "order": 13,
+    "url": "https://guide.kaspi.kz/partner/ru/shop/api/orders/q4027",
+    "title": "Как с помощью API в Магазине на Kaspi.kz получить IMEI-код устройства в заказе?",
+    "updated": "30.05.2025",
+    "text": [
+      "Для этого отправьте API-запрос. Можно использовать любой сервис, например, Postman, Insomnia, Paw, Swagger, SoapUI или настроить интеграцию с вашей системой учета.",
+      "В ответе вы получите IMEI-коды, которые привязаны к товарам в заказе, и количество устройств в нем."
+    ],
+    "tables": [
+      [
+        [
+          "Параметр",
+          "Значение"
+        ],
+        [
+          "id",
+          "Уникальный код заказа\nЧтобы его узнать:\nс помощью API в Магазине на Kaspi.kz получите информацию о составе заказа;\nскопируйте значение атрибута «id» для \"type\": \"orders\"."
+        ]
+      ]
+    ],
+    "examples": [
+      {
+        "title": "Посмотреть пример запроса",
+        "text": "request GET\nurl: https://kaspi.kz/shop/api/v2/orders/{id}/imei\nContent-Type: application/vnd.api+json\nX-Auth-Token: token"
+      },
+      {
+        "title": "Посмотреть пример ответа",
+        "text": "{\n\"data\": {\n\"id\": \"orderCode\",\n\"type\": \"orderimeis\",\n\"attributes\": {\n\"entries\": [\n{\n\"entryNumber\": 0,\n\"masterProductCode\": \"masterProductCode\",\n\"items\": [\n{\n\"itemNumber\": 1,\n\"imei\": [\"XXXXXXXXXXXXXX\"]\n}\n]\n}\n]\n}\n},\n\"included\": []"
+      }
+    ]
+  }
+}
