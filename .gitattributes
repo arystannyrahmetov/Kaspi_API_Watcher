@@ -1,0 +1,5 @@
+# Переводы строк не зависят от настроек клиента:
+# .bat читает cmd (ему нужен CRLF), .sh — /bin/sh (ему нужен LF).
+* text=auto
+*.bat text eol=crlf
+*.sh text eol=lf
